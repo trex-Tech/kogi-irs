@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://api.kgirs-gamingtaxation.com"
+export const BACKEND_URL = "https://kogiirs.aoctms.com.ng"

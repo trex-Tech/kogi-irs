@@ -467,7 +467,7 @@ const SingleInvoice = () => {
                 className={`bg-[#4463b0] text-white p-[12px] rounded-[8px] cursor-pointer`}
                 onClick={() => downloadAsPdf()}
               >
-                <p>Download Invoice</p>
+                <p>Download Internal Invoice</p>
               </div>
             </div>
             {data?.payment_status === "Pending" && (
@@ -476,7 +476,7 @@ const SingleInvoice = () => {
                   className="bg-[#4463b0]  text-white font-bold py-2 px-4 rounded w-[100%]"
                   onClick={handlePaymentClick}
                 >
-                  Proceed to Payment
+                  Download External Invoice
                 </button>
               </div>
             )}
