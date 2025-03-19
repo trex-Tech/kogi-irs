@@ -195,33 +195,33 @@ const OperatorSignup = () => {
     };
 
     try {
-      const signature = computeHMACSHA256Base64(data_2);
-      console.log("Computed signature:", signature);
+      // const signature = computeHMACSHA256Base64(data_2);
+      // console.log("Computed signature:", signature);
 
-      const response = await axios.post(
-        "https://testingapi.paykaduna.com/api/ESBills/RegisterTaxPayer",
-        data_2,
-        {
-          headers: {
-            "X-Api-Signature": signature,
-          },
-        }
-      );
+      // const response = await axios.post(
+      //   "https://testingapi.paykaduna.com/api/ESBills/RegisterTaxPayer",
+      //   data_2,
+      //   {
+      //     headers: {
+      //       "X-Api-Signature": signature,
+      //     },
+      //   }
+      // );
 
-      console.log("First endpoint response:", response);
-      console.log("Response status:", response.status);
-      console.log("Response data:", response.data);
+      // console.log("First endpoint response:", response);
+      // console.log("Response status:", response.status);
+      // console.log("Response data:", response.data);
 
-      const res_data = response.data;
-      console.log("res_data:", res_data);
-      const userRegistration = response.data.userRegistration;
-      const user = response.data.user;
-      const userType = response.data.userType;
+      // const res_data = response.data;
+      // console.log("res_data:", res_data);
+      // const userRegistration = response.data.userRegistration;
+      // const user = response.data.user;
+      // const userType = response.data.userType;
 
-      data.tpui = userRegistration.tpui;
-      data.external_id = userRegistration.id;
-      data.external_user_id = user.id;
-      console.log("Data to send to second endpoint:", res_data);
+      // data.tpui = userRegistration.tpui;
+      // data.external_id = userRegistration.id;
+      // data.external_user_id = user.id;
+      console.log("Data to send to second endpoint:", data);
 
       const res = await axios.post(`${BACKEND_URL}/accounts/register/`, data);
 
