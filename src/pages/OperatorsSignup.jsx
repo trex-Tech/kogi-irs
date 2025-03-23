@@ -25,7 +25,7 @@ const OperatorSignup = () => {
     document: "",
     numberOfAgents: "",
     middleName: "0",
-    tin: "9922346",
+    tin: "",
     IcNumber: "913337",
   });
   const [loading, setLoading] = useState(false);
@@ -175,6 +175,7 @@ const OperatorSignup = () => {
       cac_number: values.cac_number,
       document: values.document,
       no_of_agents: values.numberOfAgents,
+      kgtin: values.tin,
     };
 
     const data_2 = {
@@ -377,6 +378,20 @@ const OperatorSignup = () => {
                 }
               />
             </div>
+
+            <div>
+              <label htmlFor="">TIN</label>
+              <input
+                type="text"
+                className={`w-full outline-none border border-gray-400 p-[10px] rounded-[6px]`}
+                placeholder="TIN"
+                value={values.tin}
+                onChange={(e) =>
+                  setValues({ ...values, tin: e.target.value })
+                }
+              />
+            </div>
+
             <div>
               <label htmlFor="">Upload CAC Document</label>
               <div

@@ -463,12 +463,12 @@ const SingleInvoice = () => {
                 pdfState ? `hidden` : `visible`
               }`}
             >
-              <div
+              {/* <div
                 className={`bg-[#4463b0] text-white p-[12px] rounded-[8px] cursor-pointer`}
                 onClick={() => downloadAsPdf()}
               >
                 <p>Download Internal Invoice</p>
-              </div>
+              </div> */}
             </div>
             {data?.payment_status === "Pending" && (
               <div className={`flex`}>
