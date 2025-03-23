@@ -99,7 +99,7 @@ const SingleInvoice = () => {
         .then((dataUrl) => {
           const pdf = new jsPDF("p", "mm", "a4"); // 'p' for portrait, 'a4' for the page size
 
-          // Get the dimensions of A4 page in pixels
+          // Get the dimensions of A4 page in pixelss
           const pageWidth = pdf.internal.pageSize.getWidth();
           const pageHeight = pdf.internal.pageSize.getHeight();
 
